@@ -1,0 +1,14 @@
+{
+  "user": {
+    "a08": "Jean Dupont",
+    "a09": "Développeur fullstack avec une forte compétence en React et Node.js"
+  },
+  "item": {
+    "s01": ["vendor", "parent company"],
+    "p02": "no",
+    "i01": [
+      { "country": "France", "percent": 70 },
+      { "country": "Germany", "percent": 30 }
+    ]
+  }
+}
