@@ -21,8 +21,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
 #root > div {
@@ -40,6 +38,5 @@ html {
 }
 
 #root > div > .group-layout > .group-layout-item {
-  border-radius: 25px;
-  padding: 10px;
+  margin: 25px;
 }
