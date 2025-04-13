@@ -1,0 +1,25 @@
+.arrayStringRenderer {
+  margin: 20px 0;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.badges {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  background-color: var(--color-bisque, #ffe4c4);
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 0.9em;
+  color: #333;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}

@@ -3,5 +3,42 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: aquamarine;
+  margin: 25px 0;
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.answers {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.answers li {
+  background-color: var(--color-bisque);
+  width: 120px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.answer.selected {
+  background-color: var(
+    --primary-color
+  ); /* Couleur différente pour indiquer la sélection */
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
 }

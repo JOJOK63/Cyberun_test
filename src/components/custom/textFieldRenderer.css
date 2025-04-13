@@ -1,12 +1,16 @@
 .textFieldRenderer-content {
   display: flex;
   justify-content: start;
-  gap: 10px;
+  align-items: center;
+  gap: 100px;
+  margin: 20px 0;
 }
 
 .p1 {
   font-weight: bold;
+  width: 30%;
 }
 
 .p2 {
+  width: 70%;
 }

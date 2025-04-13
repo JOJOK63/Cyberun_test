@@ -12,11 +12,23 @@ import { textFieldTester } from './textFieldTester';
 import EnumRenderer from '../components/custom//EnumRenderer';
 import { enumTester } from './enumTester';
 
+import MultiLineRenderer from '../components/custom/MultiLineRenderer';
+import { multiLineTester } from './multiLineTester';
+
+import CountryPercentageRenderer from '../components/custom/CountryPercentageRenderer';
+import { countryPercentageTester } from './countryPercentageTester';
+
+import ArrayStringRenderer from '../components/custom/ArrayStringRenderer';
+import { arrayStringTester } from './arrayStringTester';
+
 export const CompleteFormRenderer = () => {
   const customRenderers = [
     ...vanillaRenderers,
     { tester: textFieldTester, renderer: TextFieldRenderer },
     { tester: enumTester, renderer: EnumRenderer },
+    { tester: multiLineTester, renderer: MultiLineRenderer },
+    { tester: countryPercentageTester, renderer: CountryPercentageRenderer },
+    { tester: arrayStringTester, renderer: ArrayStringRenderer },
   ];
 
   return (
@@ -26,7 +38,7 @@ export const CompleteFormRenderer = () => {
       data={data}
       renderers={customRenderers}
       cells={vanillaCells}
-      //readonly={true} // clé ici
+      readonly={true} // clé ici
     />
   );
 };

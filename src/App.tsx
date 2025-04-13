@@ -3,7 +3,7 @@ import { CompleteFormRenderer } from './components/CompleteFormRenderer';
 
 const App = () => {
   return (
-    <div>
+    <div className="test">
       <CompleteFormRenderer />
     </div>
   );

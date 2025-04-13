@@ -4,34 +4,25 @@ import { ControlProps } from '@jsonforms/core';
 
 import '../custom/enumRenderer.css';
 
-const EnumRenderer = ({ data, label, uischema, schema }: ControlProps) => {
-  // Vérifier le contenu de uischema.scope
-  console.log('UISchema Scope:', uischema.scope);
-
-  // Récupérer le nom du champ à partir du scope pour obtenir la bonne propriété dans le schéma
-  const property = uischema.scope.split('/')[2];
-  console.log('Property name:', property);
-
-  // Récupérer les options de l'énumération à partir du schéma
-  const enumValues = schema?.properties?.[property]?.enum || [];
-  console.log('Enum values:', enumValues);
+const EnumRenderer = ({ data, label, schema }: ControlProps) => {
+  const enumValues = schema?.enum || [];
 
   return (
     <div className="enumRenderer-content">
-      <p>{label}</p>
-      <div>
+      <p className="question">{label}</p>
+      <ul className="answers">
         {enumValues.length > 0 ? (
-          enumValues.map((value, index) => <p key={index}>{value}</p>)
+          enumValues.map((value, index) => (
+            <li
+              key={index}
+              className={value === data ? 'answer selected' : 'answer'}>
+              {value}
+            </li>
+          ))
         ) : (
-          <p>No options available</p>
+          <li className="answer empty">No options available</li>
         )}
-      </div>
-      <div>
-        {/* Afficher la réponse sélectionnée */}
-        <p style={{ fontWeight: 'bold', color: 'orange' }}>
-          Selected Answer: {data ?? 'No answer selected'}
-        </p>
-      </div>
+      </ul>
     </div>
   );
 };
