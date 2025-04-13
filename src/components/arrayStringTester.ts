@@ -1,9 +1,13 @@
-import { rankWith, isControl } from '@jsonforms/core';
+import { rankWith } from '@jsonforms/core';
+import { JsonSchema, UISchemaElement } from '@jsonforms/core';
 
 export const arrayStringTester = rankWith(
-  5,
-  (uischema, schema) =>
-    isControl(uischema) &&
-    schema?.type === 'array' &&
-    schema.items?.type === 'string',
+  3,
+  (uischema: UISchemaElement, schema: JsonSchema) =>
+    !!(
+      schema?.type === 'array' &&
+      schema.items &&
+      !Array.isArray(schema.items) &&
+      schema.items.type === 'string'
+    ),
 );
