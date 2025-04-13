@@ -1,0 +1,12 @@
+.textFieldRenderer-content {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+}
+
+.p1 {
+  font-weight: bold;
+}
+
+.p2 {
+}

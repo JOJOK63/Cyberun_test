@@ -1,14 +1,13 @@
 import React from 'react';
 import { withJsonFormsControlProps } from '@jsonforms/react';
 import { ControlProps } from '@jsonforms/core';
+import '../custom/textFieldRenderer.css';
 
 const TextFieldRenderer = ({ data, label }: ControlProps) => {
   return (
-    <div className="bg-grey-500  flex">
-      <p style={{ fontWeight: 'bold', marginBottom: '0.3rem', color: 'red' }}>
-        {label}
-      </p>
-      <p style={{ margin: 0 }}>{data ?? '-'}</p>
+    <div className="textFieldRenderer-content">
+      <p className="p1">{label}:</p>
+      <p className="p2">{data ?? '-'}</p>
     </div>
   );
 };
